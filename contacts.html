@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | KhobbyTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="portfolio-shell" data-palette="ocean" data-mode="dark">
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a href="index.html" class="wordmark" aria-label="KhobbyTech home">KhobbyTech<span class="brand-dot">.</span></a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="qualities.html">Why Me</a>
+                <a href="projects.html">My Projects</a>
+                <a href="contacts.html" class="active">Reach Me</a>
+            </nav>
+
+            <div class="controls">
+                <button id="mode" class="icon-button" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Toggle theme">
+                    <span id="sun"><i data-lucide="sun"></i></span>
+                    <span id="moon" hidden><i data-lucide="moon"></i></span>
+                </button>
+                <button id="menu" class="icon-button mobile-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="qualities.html">Why Me</a>
+            <a href="projects.html">My Projects</a>
+            <a href="contacts.html">Reach Me</a>
+        </nav>
+    </header>
+
+    <main class="wrap contact-page-wrap">
+        <section class="contact-page reveal">
+            <div class="contact-intro">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h1>Let’s Work Together</h1>
+                <p class="contact-copy">
+                    Have a project or idea in mind? Send me a message and I’ll get back to you as soon as possible.
+                </p>
+
+                <div class="contact-details">
+                    <p><strong>Name:</strong> Kester Kwabena Datsa</p>
+                    <p><strong>Email:</strong> kesterkwabena9@gmail.com</p>
+                    <p><strong>Phone:</strong> <a href="tel:0550641676">0550641676</a></p>
+                    <p><strong>Location:</strong> Available remotely</p>
+                    <p><strong>Availability:</strong> Open to opportunities</p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="field-group">
+                    <label for="name">Your Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="email">Your Email</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" placeholder="What is your message about?" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="6" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button class="action primary" type="submit">Send Message</button>
+                <p id="formStatus" class="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-row">
+            <p>© 2026 KhobbyTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="contact-form.js"></script>
+</body>
+</html>

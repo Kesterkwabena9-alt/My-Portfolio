@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | KhobbyTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <div id="app" class="portfolio-shell" data-palette="ocean" data-mode="dark">
+        <header class="site-header">
+            <div class="wrap header-row">
+                <a href="index.html" class="wordmark" aria-label="KhobbyTech home">KhobbyTech<span class="brand-dot">.</span></a>
+
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About Me</a>
+                    <a href="qualities.html">Why Me</a>
+                    <a href="projects.html">My Projects</a>
+                    <a href="contacts.html">Reach Me</a>
+                </nav>
+
+                <div class="controls">
+                    <button id="mode" class="icon-button" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Toggle theme">
+                        <span id="sun"><i data-lucide="sun"></i></span>
+                        <span id="moon" hidden><i data-lucide="moon"></i></span>
+                    </button>
+                    <button id="menu" class="icon-button mobile-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="qualities.html">Why Me</a>
+                <a href="projects.html">My Projects</a>
+                <a href="contacts.html">Reach Me</a>
+            </nav>
+        </header>
+
+        <main class="wrap contact-page-wrap">
+            <section class="section reveal">
+                <div class="about-grid">
+                    <div>
+                        <p class="eyebrow">01 / THE PERSON BEHIND THE PIXELS</p>
+                        <h2>About Me</h2>
+                    </div>
+
+                    <div>
+                        <p class="about-copy">
+                            My name is Kester Kwabena Datsa, and I am a passionate Frontend Developer.
+                            I enjoy creating modern, responsive, and user-friendly websites that feel polished,
+                            easy to use, and visually engaging.
+                        </p>
+                        <p class="about-copy">
+                            I am constantly learning new technologies and improving my skills to build better
+                            digital experiences that combine creativity with practical functionality.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">MY SKILLS</p>
+                        <h2>What I Work With</h2>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <article class="service">
+                        <i data-lucide="code-2" aria-hidden="true"></i>
+                        <h3>HTML</h3>
+                        <p>Building clean, structured, and accessible web pages.</p>
+                    </article>
+
+                    <article class="service">
+                        <i data-lucide="paintbrush-2" aria-hidden="true"></i>
+                        <h3>CSS</h3>
+                        <p>Creating attractive, responsive, and polished user interfaces.</p>
+                    </article>
+
+                    <article class="service">
+                        <i data-lucide="code-2" aria-hidden="true"></i>
+                        <h3>JavaScript</h3>
+                        <p>Adding interactions and functionality to deliver better experiences.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap footer-row">
+                <p>© 2026 KhobbyTech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+</html>

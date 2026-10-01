@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Me | KhobbyTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="portfolio-shell" data-palette="ocean" data-mode="dark">
+    <div id="app" class="portfolio-shell" data-palette="ocean" data-mode="dark">
+        <header class="site-header">
+            <div class="wrap header-row">
+                <a href="index.html" class="wordmark" aria-label="KhobbyTech home">KhobbyTech<span class="brand-dot">.</span></a>
+
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="qualities.html" class="active">Why Me</a>
+                    <a href="projects.html">My Projects</a>
+                    <a href="contacts.html">Reach Me</a>
+                </nav>
+
+                <div class="controls">
+                    <button id="mode" class="icon-button" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Toggle theme">
+                        <span id="sun"><i data-lucide="sun"></i></span>
+                        <span id="moon" hidden><i data-lucide="moon"></i></span>
+                    </button>
+                    <button id="menu" class="icon-button mobile-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="qualities.html">Why Me</a>
+                <a href="projects.html">My Projects</a>
+                <a href="contacts.html">Reach Me</a>
+            </nav>
+        </header>
+
+        <main class="wrap contact-page-wrap">
+            <section class="section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">02 / WHY CLIENTS CHOOSE ME</p>
+                        <h2>Why Me</h2>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <article class="service">
+                        <i data-lucide="sparkles" aria-hidden="true"></i>
+                        <h3>Creative</h3>
+                        <p>I create unique, thoughtful, and visually appealing designs that stand out.</p>
+                    </article>
+
+                    <article class="service">
+                        <i data-lucide="badge-check" aria-hidden="true"></i>
+                        <h3>Reliable</h3>
+                        <p>I take ownership of my work, stay consistent, and deliver results you can trust.</p>
+                    </article>
+
+                    <article class="service">
+                        <i data-lucide="hammer" aria-hidden="true"></i>
+                        <h3>Hardworking</h3>
+                        <p>I am driven to learn, improve, and bring quality to every project I build.</p>
+                    </article>
+
+                    <article class="service">
+                        <i data-lucide="monitor-smartphone" aria-hidden="true"></i>
+                        <h3>Responsive</h3>
+                        <p>I design websites that feel smooth, clean, and easy to use across all devices.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap footer-row">
+                <p>&copy; 2026 KhobbyTech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+</html>

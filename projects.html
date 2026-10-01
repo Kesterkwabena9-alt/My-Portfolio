@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | KhobbyTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="portfolio-shell" data-palette="ocean" data-mode="dark">
+    <div id="app" class="portfolio-shell" data-palette="ocean" data-mode="dark">
+        <header class="site-header">
+            <div class="wrap header-row">
+                <a href="index.html" class="wordmark" aria-label="KhobbyTech home">KhobbyTech<span class="brand-dot">.</span></a>
+
+                <nav class="desktop-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="qualities.html">Why Me</a>
+                    <a href="projects.html" class="active">My Projects</a>
+                    <a href="contacts.html">Reach Me</a>
+                </nav>
+
+                <div class="controls">
+                    <button id="mode" class="icon-button" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Toggle theme">
+                        <span id="sun"><i data-lucide="sun"></i></span>
+                        <span id="moon" hidden><i data-lucide="moon"></i></span>
+                    </button>
+                    <button id="menu" class="icon-button mobile-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="qualities.html">Why Me</a>
+                <a href="projects.html">My Projects</a>
+                <a href="contacts.html">Reach Me</a>
+            </nav>
+        </header>
+
+        <main class="wrap contact-page-wrap">
+            <section class="section reveal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">03 / IDEAS INTO INTERFACES</p>
+                        <h2>My Projects</h2>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <article class="project">
+                        <div class="preview project-visual" aria-label="Benedicta's Decor project preview">
+                            <img class="project-image" src="project%20images/bene's%20decor.png" alt="Benedicta's Decor project preview" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>Benedicta's Decor</h3>
+                            <p>Client project · Luxury interiors and home styling website</p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="preview project-visual" aria-label="Horizon Academy project preview">
+                            <img class="project-image" src="project%20images/horizon%20Academy.png" alt="Horizon Academy project preview" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>Horizon Academy</h3>
+                            <p>Client project · Education brand website and student-first landing experience</p>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="preview project-visual" aria-label="Zylo Music Player project preview">
+                            <img class="project-image" src="project%20images/Zylo%20music%20player.png" alt="Zylo Music Player project preview" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>In Progress Project</h3>
+                            <p>Current work · Music player UI concept still in progress</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap footer-row">
+                <p>&copy; 2026 KhobbyTech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+</html>
