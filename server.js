@@ -53,7 +53,7 @@ app.post('/api/contact', (req, res) => {
   };
   messages.push(entry);
 
-  const smtpPass = process.env.SMTP_PASS || 'qhsqfhxscrhoxkut';
+  const smtpPass = process.env.SMTP_PASS || 'yorbshuxpwqdodit';
   const hasRealSmtpConfig = Boolean(
     process.env.SMTP_HOST &&
     process.env.SMTP_USER &&
