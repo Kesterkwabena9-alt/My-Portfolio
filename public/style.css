@@ -130,7 +130,8 @@ body[data-mode=light] .action.primary{
     border-color:var(--line)!important;
 }
 .portfolio-shell[data-mode=light] .action.primary{
-    color:var(--bg)!important;
+    background:var(--accent)!important;
+    color:#fff!important;
 }
 h1,h2,h3,.wordmark{
     font-family:Manrope,sans-serif
@@ -238,6 +239,13 @@ select,.icon-button{
 .hero{
     position:relative;
     padding:78px 0 80px;
+    background-image:linear-gradient(rgba(7,27,36,.62),rgba(7,27,36,.72)),url("project%20images/code.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.portfolio-shell[data-mode=light] .hero{
+    background-image:linear-gradient(rgba(244,247,246,.56),rgba(244,247,246,.68)),url("project%20images/code.jpg");
 }
 .hero:before{
     content:'';
@@ -265,6 +273,16 @@ select,.icon-button{
     color:var(--muted);
     max-width:540px;
     margin:24px 0 30px;
+}
+.hero .intro,
+.hero .status{
+    color:#f4fbfc;
+    text-shadow:0 1px 3px rgba(0,0,0,.7);
+}
+.portfolio-shell[data-mode=light] .hero .intro,
+.portfolio-shell[data-mode=light] .hero .status{
+    color:#182f36!important;
+    text-shadow:0 1px 3px rgba(255,255,255,.8);
 }
 .button-row{
     display:flex;
@@ -510,10 +528,60 @@ select,.icon-button{
         gap:30px;
         box-shadow:0 16px 30px rgba(0,0,0,.06);
     }
+    .contact-background,
+    .contact-background:after,
+    .contact-background-slide{
+        position:absolute;
+        inset:0;
+    }
+    .contact-background{
+        z-index:0;
+        overflow:hidden;
+        background:var(--bg);
+    }
+    .contact-background:after{
+        content:'';
+        background:rgba(3,15,20,.3);
+    }
+    .contact-background-slide{
+        display:block;
+        background-position:center;
+        background-size:cover;
+        opacity:0;
+        transform:scale(1.08);
+        animation:contact-image-slide 24s ease-in-out infinite;
+    }
+    .contact-background-slide:nth-child(1){
+        background-image:url("project%20images/contact%20img/contact.jpg");
+    }
+    .contact-background-slide:nth-child(2){
+        background-image:url("project%20images/contact%20img/call.jpg");
+        animation-delay:-6s;
+    }
+    .contact-background-slide:nth-child(3){
+        background-image:url("project%20images/contact%20img/dail.jpg");
+        animation-delay:-12s;
+    }
+    .contact-background-slide:nth-child(4){
+        background-image:url("project%20images/contact%20img/talk.jpg");
+        animation-delay:-18s;
+    }
+    @keyframes contact-image-slide{
+        0%{opacity:0;transform:scale(1.08) translateX(3%)}
+        5%,20%{opacity:1;transform:scale(1.24) translateX(0)}
+        25%,100%{opacity:0;transform:scale(1.34) translateX(-5%)}
+    }
+    .contact-page > :not(.contact-background){
+        position:relative;
+        z-index:1;
+    }
     .contact-box p{
         color:var(--muted);
         max-width:600px;
         margin-top:20px;
+    }
+    .portfolio-shell[data-mode=light] .contact-background:after{
+        background:rgba(244,247,246,.35);
     }
     footer{
         padding:30px 0;
@@ -549,6 +617,9 @@ select,.icon-button{
         padding-bottom:80px;
     }
     .contact-page{
+        position:relative;
+        isolation:isolate;
+        overflow:hidden;
         display:grid;
         grid-template-columns:1fr 1.1fr;
         gap:32px;
@@ -650,4 +721,6 @@ select,.icon-button{
     .portrait-stage{max-width:330px;width:100%;margin:10px auto 0}.cards{grid-template-columns:1fr}.section{padding:55px 0}.section-heading{align-items:start;flex-direction:column}.contact-box{padding:30px;align-items:start;flex-direction:column}.footer-row{flex-direction:column}.monogram{font-size:150px}}
 @media(prefers-reduced-motion:reduce){
     html{
-        scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal.pending{opacity:1;transform:none}}
+        scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal.pending{opacity:1;transform:none}
+    .contact-background-slide:first-child{opacity:1;transform:none}
+}
