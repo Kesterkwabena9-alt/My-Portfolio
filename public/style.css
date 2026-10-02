@@ -232,6 +232,7 @@ button{
     display:block;
     width:92px;
     height:68px;
+    border-radius:15px;
     object-fit:contain;
 }
 .brand-dot{
