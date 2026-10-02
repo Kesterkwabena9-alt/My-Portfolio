@@ -219,12 +219,20 @@ button{
     justify-content:space-between;
     gap:24px;
 }.wordmark{
+    display:inline-flex;
+    align-items:center;
     font-family:Manrope,sans-serif;
     font-weight:800;
     font-size:16px;
     line-height:1;
     letter-spacing:-.06em;
     color:var(--text);
+}
+.wordmark img{
+    display:block;
+    width:92px;
+    height:68px;
+    object-fit:contain;
 }
 .brand-dot{
     color:var(--accent);
@@ -427,10 +435,15 @@ select,.icon-button{
         box-shadow:0 14px 30px rgba(0,0,0,.05);
     }
     .service svg{
-        color:var(--accent);
-        width:28px;
-        height:28px;
-        margin-bottom:30px;
+        display:block;
+        box-sizing:border-box;
+        width:54px;
+        height:54px;
+        padding:14px;
+        border-radius:15px;
+        background:var(--accent);
+        color:var(--bg);
+        margin-bottom:22px;
     }
     .service p{
         color:var(--muted);
@@ -738,6 +751,7 @@ select,.icon-button{
 @media(max-width:700px){
     .wrap{padding:0 22px}
     .header-row{min-height:76px;gap:10px}
+    .wordmark img{width:82px;height:60px}
     .controls{gap:6px}
     select{
         max-width:90px;
