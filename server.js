@@ -8,9 +8,24 @@ dotenv.config();
 const app = express();
 const messages = [];
 const rootDir = process.cwd();
+const staticFiles = express.static(rootDir, {
+  index: 'index.html',
+  extensions: ['html'],
+  setHeaders(res, filePath) {
+    if (path.extname(filePath) === '.js') {
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+    }
+  }
+});
 
 app.use(express.json({ limit: '1mb' }));
-app.use(express.static(rootDir, { index: 'index.html', extensions: ['html'] }));
+app.use((req, res, next) => {
+  if (req.path === '/api' || req.path.startsWith('/api/')) {
+    return next();
+  }
+
+  return staticFiles(req, res, next);
+});
 
 app.get('/', (_req, res) => {
   res.sendFile(path.join(rootDir, 'index.html'));
@@ -173,6 +188,13 @@ app.get('/api/messages', (_req, res) => {
     ok: true,
     count: messages.length,
     messages
+  });
+});
+
+app.use('/api', (_req, res) => {
+  res.status(404).json({
+    ok: false,
+    message: 'API endpoint not found.'
   });
 });
 
