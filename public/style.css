@@ -330,7 +330,11 @@ select,.icon-button{
     margin:auto;
     border:1px solid var(--line);
     border-radius:150px 150px 24px 24px;
-    background:linear-gradient(150deg,var(--surface),var(--bg));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.portrait-frame:before,.portrait-frame:after{content:'';position:absolute;border:1px solid var(--line);border-radius:50%;width:310px;height:310px;transform:rotate(-20deg) scaleX(.65)}.portrait-frame:after{transform:rotate(30deg) scaleX(.7);width:400px;height:400px}.monogram{font-family:Manrope,sans-serif;font-weight:800;font-size:180px;line-height:1;color:var(--accent);z-index:1;letter-spacing:-.1em;padding-right:15px}.portrait-image{position:relative;z-index:1;width:96%;max-width:330px;height:auto;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.28))}.portrait-note{position:absolute;left:-5px;bottom:12px;border:1px solid var(--line);background:var(--surface);padding:15px 22px;border-radius:12px;box-shadow:0 20px 40px #0002}.portrait-note p{margin:0}.tiny{font-size:.75rem;color:var(--muted)}
+    background:linear-gradient(150deg,var(--surface),var(--bg));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.portrait-frame:before,.portrait-frame:after{content:'';position:absolute;border:1px solid var(--line);border-radius:50%;width:310px;height:310px;transform:rotate(-20deg) scaleX(.65)}.portrait-frame:after{transform:rotate(30deg) scaleX(.7);width:400px;height:400px}.monogram{font-family:Manrope,sans-serif;font-weight:800;font-size:180px;line-height:1;color:var(--accent);z-index:1;letter-spacing:-.1em;padding-right:15px}.portrait-image{position:relative;z-index:1;width:96%;max-width:330px;height:auto;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.28));animation:portrait-breathe 6s ease-in-out infinite;transform-origin:center}.portrait-note{position:absolute;left:-5px;bottom:12px;border:1px solid var(--line);background:var(--surface);padding:15px 22px;border-radius:12px;box-shadow:0 20px 40px #0002}.portrait-note p{margin:0}.tiny{font-size:.75rem;color:var(--muted)}
+    @keyframes portrait-breathe{
+        0%,100%{transform:scale(1)}
+        50%{transform:scale(1.06)}
+    }
 .section{
     padding:74px 0;
     border-top:1px solid var(--line)
