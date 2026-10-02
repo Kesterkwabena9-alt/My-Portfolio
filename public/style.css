@@ -239,13 +239,6 @@ select,.icon-button{
 .hero{
     position:relative;
     padding:78px 0 80px;
-    background-image:linear-gradient(rgba(7,27,36,.62),rgba(7,27,36,.72)),url("project%20images/code.jpg");
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-}
-.portfolio-shell[data-mode=light] .hero{
-    background-image:linear-gradient(rgba(244,247,246,.56),rgba(244,247,246,.68)),url("project%20images/code.jpg");
 }
 .hero:before{
     content:'';
@@ -273,16 +266,6 @@ select,.icon-button{
     color:var(--muted);
     max-width:540px;
     margin:24px 0 30px;
-}
-.hero .intro,
-.hero .status{
-    color:#f4fbfc;
-    text-shadow:0 1px 3px rgba(0,0,0,.7);
-}
-.portfolio-shell[data-mode=light] .hero .intro,
-.portfolio-shell[data-mode=light] .hero .status{
-    color:#182f36!important;
-    text-shadow:0 1px 3px rgba(255,255,255,.8);
 }
 .button-row{
     display:flex;
