@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 const messages = [];
 const rootDir = process.cwd();
-const staticFiles = express.static(rootDir, {
+const publicDir = path.join(rootDir, 'public');
+const staticFiles = express.static(publicDir, {
   index: 'index.html',
   extensions: ['html'],
   setHeaders(res, filePath) {
@@ -28,7 +29,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (_req, res) => {
-  res.sendFile(path.join(rootDir, 'index.html'));
+  res.sendFile(path.join(publicDir, 'index.html'));
 });
 
 export function validateContactPayload(payload = {}) {
