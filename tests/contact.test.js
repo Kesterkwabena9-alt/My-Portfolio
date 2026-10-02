@@ -22,3 +22,11 @@ test('missing fields fail validation', () => {
   assert.equal(result.valid, false);
   assert.ok(result.errors.length > 0);
 });
+
+test('home page is served at /', async () => {
+  const response = await fetch('http://127.0.0.1:3000/');
+
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /KhobbyTech|portfolio|<html/i);
+});

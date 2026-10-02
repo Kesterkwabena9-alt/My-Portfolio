@@ -33,7 +33,28 @@ if (form && status) {
         body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
+      const responseText = await response.text();
+      let result;
+
+      try {
+        result = responseText ? JSON.parse(responseText) : null;
+      } catch {
+        if (response.status === 405) {
+          throw new Error(
+            'The contact form endpoint returned HTTP 405 (Method Not Allowed). Check that POST /api/contact is routed to the Express API.'
+          );
+        }
+
+        throw new Error(
+          `The contact form endpoint returned an unexpected response (HTTP ${response.status}).`
+        );
+      }
+
+      if (!result || typeof result !== 'object') {
+        throw new Error(
+          `The contact form endpoint returned an empty or invalid response (HTTP ${response.status}).`
+        );
+      }
 
       if (!response.ok) {
         throw new Error(result.message || 'Something went wrong while sending your message.');
